@@ -1,4 +1,12 @@
+---
+- name: Create User
+  hosts: all
+  become: true
+  tasks:
+    - name: Create Jenkins user
+      user:
+        name: jenkinsuser
+        state: present
+Run it:
+ansible-playbook userplaybook.yml
 
-Target section:
-Task Section:
-Varibable Section:
